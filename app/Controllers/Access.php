@@ -9,8 +9,6 @@ class Access extends Controller {
 	if(!empty($_GET['fach']) && !empty($_GET['v']) && !empty($_GET['name'])){
 	
 	
-	  // actually islogged()?    
-	  if( True ){
 		$file_name = $_GET['name'];
 		$path = $_GET['fach'] . '/' . $_GET['v'];
 		
@@ -26,7 +24,6 @@ class Access extends Controller {
 		  readfile( $file );
 		  exit;
 		}
-	  }
 	}
 	else {
 		header("location: index.php");
